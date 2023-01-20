@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Star</title>
+    <link rel="shortcut icon" href="image/R (3).png" type="image/x-icon" />
+
+    <!-- Daisyui Start  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisyui End  -->
+
+    <!-- Google Font  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font End  -->
+
+    <!-- Font Oswam  -->
+    <script
+      src="https://kit.fontawesome.com/f2f105c995.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body
+    style="font-family: 'Josefin Sans', sans-serif"
+    class="bg-gray-800 text-white"
+  >
+    <!-- Header Start  -->
+    <header class="container mx-auto lg:px-5 px-2">
+      <!-- Navber Star  -->
+      <div class="navbar bg-base-100 px-4 pt-10 bg-gray-800">
+        <div class="flex-1">
+          <a
+            class="normal-case font-extrabold lg:text-5xl text-xl hover:text-sky-700 text-sky-300 ml-3"
+            href="index.html"
+            >The Daily Star</a
+          >
+        </div>
+        <div class="flex-none gap-2">
+          <a
+            class="text-lg lg:text-xl lg:mr-10 mr-2 hover:text-blue-300"
+            href="news.html"
+            onclick="getButtonDitails('08')"
+            >News</a
+          >
+          <a
+            class="text-lg lg:text-xl font-medium lg:mr-10 mr-2 hover:text-blue-300"
+            href="blog.html"
+            >Blog</a
+          >
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  src="image/278054471_1306367306520664_2507989942526322870_n.jpg"
+                />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 glass shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Navber End  -->
+
+      <hr />
+    </header>
+
+    <!-- Heder End  -->
+
+    <!-- Main Start  -->
+    <main class="container mx-auto lg:px-5 px-2">
+      <header class="mt-10 text-center">
+        <div id="menuBer">
+          <div class="lg:inline 'mx-2 block mt-4">
+            <a
+              class="lg:text-xl text-xl text-center hover:text-blue-300 hover:underline underline-offset-8 lg:mr-4"
+              id="09"
+              href="index.html"
+              >Home</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- Modal Start  -->
+      <section
+        class="bg-gray-400 mt-20 w-5/6 mx-auto py-2 px-10 rounded text-sky-700 lg:text-2xl text-normal font-bold text-center"
+      >
+        <span id="box-length">No</span> items found for category Entertainment
+      </section>
+
+      <section class="bg-green-400">
+        <div id="my-modal glass">
+          <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+          <label
+            for="my-modal-4"
+            class="modal cursor-pointer"
+            id="modal display"
+          >
+            <label class="modal-box glass relative" for="" id="div-element">
+            </label>
+          </label>
+        </div>
+      </section>
+
+      <!-- Modal End  -->
+
+      <section id="processing" class="m-48 screens hidden">
+        <div class="flex items-center justify-center">
+          <button
+            type="button"
+            class="flex items-center rounded-lg bg-indigo-500 px-4 py-2 text-white"
+            disabled
+          >
+            <svg
+              class="mr-3 h-5 w-5 animate-spin text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            <span class="font-medium"> Loading... </span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h1
+          id="warning"
+          class="text-center lg:text-5xl text-2xl py-56 h-24 font-semibold text-red-300 hidden"
+        >
+          " No Result Found. Please Try Again Latter "
+        </h1>
+      </section>
+
+      <div class="mt-10" id="div-contant">
+        <h1
+          class="text-center lg:text-5xl text-2xl py-56 h-24 font-semibold text-red-300"
+        >
+          " Welcome To News Today in
+          <span class="text-blue-300">The Daily Star</span> "
+        </h1>
+      </div>
+
+      <!-- Div content End  -->
+    </main>
+    <!-- Main End  -->
+
+    <!-- Fotter  -->
+    <footer
+      id="footer"
+      class="footer footer-center p-10 mt-10 bg-gray-900 text-stone-200 mt-40"
+    >
+      <div>
+        <p>Copyright © 2022 - All right reserved by Mahadi Hasn</p>
+      </div>
+    </footer>
+
+    <!-- Java Script File Added  -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
